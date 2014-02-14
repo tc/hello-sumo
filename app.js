@@ -6,8 +6,8 @@ board = new five.Board({port: "/dev/tty.usbmodem1411"});
  
 board.on("ready", function() {
  
-  left = new five.Servo(8);
-  right = new five.Servo(13);
+  left = new five.Servo({pin: 8, type: "continuous"});
+  right = new five.Servo({pin: 13, type: "continuous"});
   left.center();
   right.center();
 
